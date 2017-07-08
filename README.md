@@ -1,3 +1,3 @@
-Yii 2 Basic Project Template
+Ehhted.com | Fitness helper
 
-Ждем описания
+Идет разработка
