@@ -14,10 +14,10 @@ class m170709_140000_create_muscle_table extends Migration
     {
         $this->createTable('muscle', [
             'id' => $this->primaryKey(),
-            'musclegroup_id' => $this->integer(),
             'name' => $this->string(),
             'image' => $this->string(),
             'description' => $this->text(),
+            'musclegroup_id' => $this->integer(),
             'viewed' => $this->integer(),
         ]);
     }
