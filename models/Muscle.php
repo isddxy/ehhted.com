@@ -30,6 +30,10 @@ class Muscle extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
+            [['musclegroup_id'], 'required'],
+            [['name'], 'required'],
+            [['image'], 'required'],
+            [['description'], 'required'],
             [['musclegroup_id', 'viewed'], 'integer'],
             [['description'], 'string'],
             [['name', 'image'], 'string', 'max' => 255],

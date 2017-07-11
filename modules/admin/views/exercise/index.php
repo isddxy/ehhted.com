@@ -27,7 +27,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'id',
             'title',
             'description:ntext',
-            'image',
+            'image:image',
             'viewed',
             // 'status',
 

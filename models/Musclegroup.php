@@ -28,6 +28,9 @@ class Musclegroup extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
+            [['name'], 'required'],
+            [['description'], 'required'],
+            [['image'], 'required'],
             [['description'], 'string'],
             [['name', 'image'], 'string', 'max' => 255],
         ];

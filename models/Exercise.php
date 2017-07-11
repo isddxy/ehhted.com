@@ -30,9 +30,12 @@ class Exercise extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
+            [['title', 'description', 'status', 'image'], 'required'],
             [['description'], 'string'],
             [['viewed', 'status'], 'integer'],
-            [['title', 'image'], 'string', 'max' => 255],
+            ['image', 'image', 'extensions' => 'png, jpg, gif'],
+            [['title',], 'string', 'max' => 255],
+
         ];
     }
 
