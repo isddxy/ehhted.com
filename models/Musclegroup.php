@@ -43,9 +43,14 @@ class Musclegroup extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'name' => 'Name',
-            'description' => 'Description',
-            'image' => 'Image',
+            'name' => 'Название',
+            'description' => 'Описание',
+            'image' => 'Картинка',
         ];
+    }
+
+    public function getMuscle()
+    {
+        return $this->hasMany(Muscle::className(), ['musclegroup_id' => 'id']);
     }
 }

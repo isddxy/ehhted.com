@@ -47,11 +47,23 @@ class Muscle extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'musclegroup_id' => 'Musclegroup ID',
-            'name' => 'Name',
-            'image' => 'Image',
-            'description' => 'Description',
-            'viewed' => 'Viewed',
+            'musclegroup_id' => 'Группа мышц',
+            'name' => 'Название',
+            'image' => 'Картинка',
+            'description' => 'Описание',
+            'viewed' => 'Просмотров',
         ];
+    }
+
+    public function getMusclegroup()
+    {
+        return $this->hasOne(Musclegroup::className(), ['id' => 'musclegroup_id']);
+    }
+
+    public function getAllMusclegroup()
+    {
+        return $allMusclegroup = Musclegroup::find()
+            ->indexBy('id')
+            ->all();
     }
 }

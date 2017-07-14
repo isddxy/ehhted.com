@@ -23,9 +23,13 @@ $this->params['breadcrumbs'][] = $this->title;
         'filterModel' => $searchModel,
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
-
             'id',
-            'musclegroup_id',
+            [
+                'label' => 'Группа мышц',
+                'value' => function ($data) {
+                    return $data->musclegroup->name; // $data['name'] для массивов, например, при использовании SqlDataProvider.
+                },
+            ],
             'name',
             'image',
             'description:ntext',
