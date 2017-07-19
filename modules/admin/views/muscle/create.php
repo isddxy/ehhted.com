@@ -7,7 +7,7 @@ use yii\helpers\Html;
 /* @var $model app\models\Muscle */
 
 $this->title = 'Создание мышцы';
-$this->params['breadcrumbs'][] = ['label' => 'Muscles', 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => 'Мышцы', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="muscle-create">
@@ -18,7 +18,5 @@ $this->params['breadcrumbs'][] = $this->title;
         'model' => $model,
     ]) ?>
 
-
-    <hr><hr><hr>
 
 </div>

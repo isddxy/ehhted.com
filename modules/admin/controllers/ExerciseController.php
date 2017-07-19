@@ -2,9 +2,13 @@
 
 namespace app\modules\admin\controllers;
 
+use app\models\ExerciseMuscle;
+use app\models\Muscle;
+use app\models\Musclegroup;
 use Yii;
 use app\models\Exercise;
 use app\models\ExerciseSearch;
+use yii\helpers\ArrayHelper;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -65,11 +69,17 @@ class ExerciseController extends Controller
     {
         $model = new Exercise();
 
+
+        $muscles = ArrayHelper::map(Muscle::find()->all(), 'id', 'name');
+        $selected = $model->getSelectedMuscle();
+
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
         } else {
             return $this->render('create', [
                 'model' => $model,
+                'muscles' => $muscles,
+                'selected' => $selected,
             ]);
         }
     }
@@ -84,11 +94,17 @@ class ExerciseController extends Controller
     {
         $model = $this->findModel($id);
 
+        $muscles = ArrayHelper::map(Muscle::find()->all(), 'id', 'name');
+        $selected = $model->getSelectedMuscle();
+
+
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
         } else {
             return $this->render('update', [
                 'model' => $model,
+                'muscles' => $muscles,
+                'selected' => $selected,
             ]);
         }
     }
@@ -120,5 +136,11 @@ class ExerciseController extends Controller
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');
         }
+    }
+
+    public function vardump($array) {
+        echo '<pre>';
+        print_r($array);
+        echo '</pre>';
     }
 }

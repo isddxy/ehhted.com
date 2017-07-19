@@ -66,4 +66,10 @@ class Muscle extends \yii\db\ActiveRecord
             ->indexBy('id')
             ->all();
     }
+
+    public function getExercisces()
+    {
+        return $this->hasMany(Exercisce::className(), ['id' => 'exercise_id'])
+            ->viaTable('exercise_muscle', ['muscle_id' => 'id']);
+    }
 }
