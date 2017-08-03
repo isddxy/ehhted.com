@@ -4,50 +4,63 @@
 
 $this->title = 'My Yii Application';
 ?>
-<div class="site-index">
 
-    <div class="jumbotron">
-        <h1>Congratulations!</h1>
 
-        <p class="lead">You have successfully created your Yii-powered application.</p>
-
-        <p><a class="btn btn-lg btn-success" href="http://www.yiiframework.com">Get started with Yii</a></p>
-    </div>
-
-    <div class="body-content">
-
+<div class="container">
+    <section id="mainer">
         <div class="row">
-            <div class="col-lg-4">
-                <h2>Heading</h2>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
-
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/doc/">Yii Documentation &raquo;</a></p>
+            <div class="col-md-7">
+                <div class="create-training"></div>
+                <div class="create-training-bgbtn">
+                    <a class="create-training-btn md-trigger" data-modal="modal-3" href="#">Создать свою тренировку</a>
+                </div>
             </div>
-            <div class="col-lg-4">
-                <h2>Heading</h2>
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
+            <div class="col-md-5 info">
+                <h2>Создай собственную тренировку и следи за процессом</h2>
+                <p>Еще ведете дневник тренировок и следите за своим прогрессом на листке бумаги?<br>
 
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/forum/">Yii Forum &raquo;</a></p>
-            </div>
-            <div class="col-lg-4">
-                <h2>Heading</h2>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
-
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/extensions/">Yii Extensions &raquo;</a></p>
+                    Мы предоставляем личный кабинет с возможностями отслеживания прогресса всем!</p>
+                <p>Записывайте свои данные и <b>прогрессируйте!</b> Ставьте себе цели и достигайте их!</p>
             </div>
         </div>
+    </section>
 
+
+    <section id="mainer">
+        <div class="row">
+            <div class="col-md-5 info">
+                <h2>Замеряй и записываем размеры тела</h2>
+                <p>Записывайте свои данные и <b>прогрессируйте!</b> Ставьте себе цели и достигайте их!</p>
+                <div class="btns-block">
+                    <a href="#" class="btn-bg btn-small btn-green2 br-big">Записать размеры</a>
+                    <a href="#" class="btn-default btn-small">Как это работает?</a>
+                </div>
+            </div>
+
+            <div class="col-md-7 info">
+                <h2>Создай собственную тренировку и следи за процессом</h2>
+                <p>Еще ведете дневник тренировок и следите за своим прогрессом на листке бумаги?
+
+                    Мы предоставляем личный кабинет с возможностями отслеживания прогресса всем!</p>
+                <p>Записывайте свои данные и <b>прогрессируйте!</b> Ставьте себе цели и достигайте их!</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="col-md-7">
+        <h1>Заголовок 1 уровня</h1>
+        <h2>Заголовок 2 уровня</h2>
+        <h3>Заголовок 3 уровня</h3>
+        <h4>Заголовок 4 уровня</h4>
+        <h5>Заголовок 5 уровня</h5>
+        <h6>Заголовок 6 уровня</h6>
+        <p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Переписывается города текста там наш несколько они однажды залетают домах моей безорфографичный рыбного, инициал рыбными даже она то подпоясал от всех предупреждал, рот маленькая если рукописи возвращайся своего переулка, мир. Они заглавных <b>возвращайся власти своего живет</b> проектах рыбными там пунктуация языкового повстречался имеет выйти вопроса снова свой толку запятых домах, которой. </p>
+        <hr>
+        <p>Сбить на берегу предупреждал бросил приставка <strike>города</strike> свою толку дал дороге <i>парадигматическая снова имеет, первую языком</i> однажды меня, которое путь мир они скатился <sup>ipsum</sup> <sub>живет</sub> рекламных пустился, пояс он напоивший! <em>Выйти если запятой заглавных</em> дал не <strong>прямо</strong> образ но вопрос вопроса.</p>
+        <a href="#">Ссылка</a>
     </div>
+
+</div>
+
 </div>

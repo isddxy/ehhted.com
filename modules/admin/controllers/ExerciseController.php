@@ -138,9 +138,4 @@ class ExerciseController extends Controller
         }
     }
 
-    public function vardump($array) {
-        echo '<pre>';
-        print_r($array);
-        echo '</pre>';
-    }
 }

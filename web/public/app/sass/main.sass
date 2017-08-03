@@ -1,0 +1,711 @@
+@import "fonts"
+@import "libs"
+@import "vars"
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+html, body
+	height: 100%
+
+h1,h2,h3,h4,h5,h5,h6
+	color: $accent
+	font-weight: 500
+
+b
+	color: $accent2
+	font-weight: 400
+a
+	color: $accent
+	text-decoration: underline
+	&:hover
+		color: darken($accent, 8%)
+	&:focus
+		color: darken($accent, 8%)
+
+p
+	font-weight: 400
+	color: darken($gray, 14%)
+
+
+hr
+	border-color: darken($white, 5%)
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.7
+	font-family: 'Raleway', sans-serif
+	overflow-x: hidden
+	opacity: 1
+	font-weight: 500
+	//-webkit-font-smoothing: antialiased //тоненький шрифт
+
+.clear
+	clear: both
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+
+header
+	margin: 50px 0 30px 0
+	font-size: 14px
+	.top-forms
+		float: left
+		&-menu
+			margin-top: 30px
+			//padding-top: 24px
+			//border-top: 1px solid darken($white, 5%)
+			display: none ///////
+			-moz-transition: display 0.4s ease-out
+			-o-transition: display 0.4s ease-out
+			-webkit-transition: display 0.4s ease-out
+			ul
+				margin: 0
+				padding: 0
+				a
+					margin: 10px 16px 0 0
+					text-decoration: none
+					&:hover
+						text-decoration: none
+						li
+							//box-shadow: 0px 0px 30px -10px #000
+							border: 2px solid $accent
+							color: $accent
+							-moz-transition: all 0.4s ease-out
+							-o-transition: all 0.4s ease-out
+							-webkit-transition: all 0.4s ease-out
+							-webkit-box-shadow: 0px 0px 165px -32px rgba(82,82,82,0.84)
+							-moz-box-shadow: 0px 0px 165px -32px rgba(82,82,82,0.84)
+							box-shadow: 0px 0px 165px -32px rgba(82,82,82,0.84)
+							.top-forms-menu-img
+								opacity: 1
+								transition: 1s
+								-moz-transition: all 0.4s ease-out
+								-o-transition: all 0.4s ease-out
+								-webkit-transition: all 0.4s ease-out
+					// &:not(:hover)
+					// 	li
+					// 		.top-forms-menu-img
+					// 			transition: 2s
+					// 			filter: saturate(0%)
+					// 			-webkit-filter: saturate(0%)
+					li
+						display: inline-block
+						margin-left: -.36em
+						position: relative
+						border: 2px solid darken($white, 5%)
+						border-radius: 18px
+						height: 140px
+						width: 130px
+						text-align: center
+						color: darken($white, 40%)
+						font-size: 13px
+						line-height: 15px
+						-moz-transition: all 0.5s ease-out
+						-o-transition: all 0.5s ease-out
+						-webkit-transition: all 0.5s ease-out
+						p
+							bottom: 0
+							width: 100%
+							margin: 0
+							padding: 12px 10px 16px 10px
+							text-align: center
+							position: absolute
+					&:last-child
+						margin-right: 0
+			&-img
+				width: 100%
+				display: block
+				padding: 26px 20px 10px 20px
+				opacity: 0.7
+				-moz-transition: all 0.4s ease-out
+				-o-transition: all 0.4s ease-out
+				-webkit-transition: all 0.4s ease-out
+
+							
+		.change
+			background-color: none
+			border: 2px solid $accent
+			border-radius: 20px
+			outline: none
+			padding: 10px 0px 10px 23px
+			color: $accent
+			float: left
+			margin-right: 16px
+			cursor: pointer
+			width: 260px
+		.search
+			float: left
+			&-input
+				border: 2px solid $accent
+				border-radius: 20px
+				outline: none
+				padding: 10px 40px 10px 23px
+				color: $accent
+				width: 260px
+				-moz-transition: width 0.4s ease-out
+				-o-transition: width 0.4s ease-out
+				-webkit-transition: width 0.4s ease-out
+				&::-webkit-input-placeholder
+					color: $accent
+				&::-moz-placeholder          
+					color: $accent/* Firefox 19+ */
+				&:-moz-placeholder           
+					color: $accent/* Firefox 18- */
+				&:-ms-input-placeholder      
+					color: $accent
+				&:hover
+					width: 330px
+					-moz-transition: width 0.4s ease-out
+					-o-transition: width 0.4s ease-out
+					-webkit-transition: width 0.4s ease-out
+					&::-webkit-input-placeholder
+						color: $accent_white
+						-moz-transition: color 0.4s ease-out
+						-o-transition: color 0.4s ease-out
+						-webkit-transition: color 0.4s ease-out
+					&::-moz-placeholder          
+						color: $accent_white /* Firefox 19+ */
+						-moz-transition: color 0.4s ease-out
+						-o-transition: color 0.4s ease-out
+						-webkit-transition: color 0.4s ease-out
+					&:-moz-placeholder           
+						color: $accent_white /* Firefox 18- */
+						-moz-transition: color 0.4s ease-out
+						-o-transition: color 0.4s ease-out
+						-webkit-transition: color 0.4s ease-out
+					&:-ms-input-placeholder      
+						color: $accent_white
+						-moz-transition: color 0.4s ease-out
+						-o-transition: color 0.4s ease-out
+						-webkit-transition: color 0.4s ease-out
+				&:focus
+					width: 330px
+					&::-webkit-input-placeholder
+						color: $white
+					&::-moz-placeholder          
+						color: $white/* Firefox 19+ */
+					&:-moz-placeholder           
+						color: $white/* Firefox 18- */
+					&:-ms-input-placeholder      
+						color: $white
+			&-submit
+				border: none
+				//background: none
+				padding: -4px 0 0 0
+				margin: -10px -40px -30px -53px
+				height: 30px
+				width: 50px
+				background: url("/img/icons/search.svg")
+				img
+					background-color: #fff
+
+	.log-btns
+		float: right
+		margin-top: 10px
+
+
+
+///// BUTTONS //////
+
+
+.btn
+	&-default
+		color: $accent
+		text-decoration: none
+		letter-spacing: 0.05em
+	&-bg
+		letter-spacing: 0.05em
+		color: $white
+		background-color: $gray
+		text-decoration: none
+		-moz-transition: background-color 0.4s ease-out
+		-o-transition: background-color 0.4s ease-out
+		-webkit-transition: background-color 0.4s ease-out
+		&:hover
+			color: $white
+			background-color: lighten($gray, 5%)
+			text-decoration: none
+			-moz-transition: background-color 0.4s ease-out
+			-o-transition: background-color 0.4s ease-out
+			-webkit-transition: background-color 0.4s ease-out
+	&-bgradius
+		letter-spacing: 0.05em
+		color: $accent
+		border: 2px solid $accent
+		background: none
+		text-decoration: none
+		-moz-transition: color, border, background-color 0.2s ease-out
+		-o-transition: color, border, background-color 0.2s ease-out
+		-webkit-transition: color, border, background-color 0.2s ease-out
+
+		&:hover
+			color: $white
+			border: 2px solid lighten($accent2, 5%)
+			background-color: lighten($accent2, 5%)
+			text-decoration: none
+			-moz-transition: color, border, background-color 0.4s ease-out
+			-o-transition: color, border, background-color 0.4s ease-out
+			-webkit-transition: color, border, background-color 0.4s ease-out	
+
+.with-full
+	width: 100%
+
+.br-big
+	border-radius: 30px
+
+.br-small
+	border-radius: 6px
+
+.btn-green
+	border: none
+	color: $white
+	background-color: $accent
+	&:hover
+		color: $white
+		text-decoration: none
+		background-color: lighten($accent, 3%)
+	&:focus
+		text-decoration: none
+		color: $white
+		background-color: lighten($accent, 3%)
+.btn-green2
+	border: none
+	color: $white
+	background-color: $accent2
+	&:hover
+		text-decoration: none
+		color: $white
+		background-color: lighten($accent2, 5%)
+	&:focus
+		text-decoration: none
+		color: $white
+		background-color: lighten($accent2, 5%)
+.btn-vk
+	position: relative
+	font-size: 13px !important
+	border: 1px solid #435f7d
+	color: $white
+	background-color: lighten(#517398, 5%)
+	&:hover
+		text-decoration: none
+		color: $white
+		background-color: lighten(#517398, 10%)
+	&:focus
+		text-decoration: none
+		color: $white
+		background-color: lighten(#517398, 10%)
+	.vk-logo
+		border-radius: 6px 0 0 6px
+		background-color: #517398
+		height: 100%
+		width: 50px
+		padding: 0 14px 0 14px
+		margin: 0
+		position: absolute
+		top: 0
+		left: 0
+		border-right: 1px solid #435f7d
+			
+.btn
+	&-big
+		font-size: 16px
+		padding: 17px 40px 17px 40px
+	&-medium
+		font-size: 14px
+		padding: 12px 30px 13px 30px
+	&-small
+		font-size: 12px
+		padding: 10px 20px 10px 20px
+
+
+
+
+
+.log-in
+	margin: 0 20px
+
+
+.btns-block
+	margin: 26px 0
+
+///// BUTTONS END //////
+
+
+
+
+
+.order
+	margin: -1px 0 0 14px
+	-moz-transition: all 0.3s ease-out
+	-o-transition: all 0.3s ease-out
+	-webkit-transition: all 0.3s ease-out
+	text-decoration: none
+	.circle
+		background-color: $accent
+		height: 5px
+		width: 5px
+		display: inline-block
+		border-radius: 20px
+		text-decoration: none
+	&:hover
+		text-decoration: none
+		.circle
+			background-color: lighten($accent, 2%)
+			text-decoration: none
+	&-top
+		float: right
+		margin-right: 16px
+
+.order-active
+	-moz-transition: all 0.3s ease-out
+	-o-transition: all 0.3s ease-out
+	-webkit-transition: all 0.3s ease-out
+	-moz-transform: rotate(90deg) /* Firefox */
+	-o-transform: rotate(90deg) /* Opera */
+	-webkit-transform: rotate(90deg)  /* Safari y Chrome */
+	transform: rotate(90deg)
+	margin: 0px 6px -2px 14px
+
+.top-menu
+	margin-top: 30px
+	.logotype
+		width: 100px
+		float: left
+		padding: 0 20px 0 0
+	ul
+		margin: 0
+		padding: 0
+		li
+			display: inline-block
+			margin: 0
+			padding: 0 20px 0 0
+			font-size: 15px
+			a
+				color: #8ca895
+				opacity: 1
+				text-decoration: none
+				-moz-transition: color 0.4s ease-out
+				-o-transition: color 0.4s ease-out
+				-webkit-transition: color 0.4s ease-out
+				&:hover
+					text-decoration: none
+					color: lighten($accent, 1%)
+					opacity: 1
+					-moz-transition: color 0.4s ease-out
+					-o-transition: color 0.4s ease-out
+					-webkit-transition: color 0.4s ease-out
+
+.create-training
+	background-image: url('../img/bg-icons.png')
+	background-size: 100%
+	width: 100%
+	opacity: 0.4
+	height: 320px
+	position: relative
+	vertical-align: center
+	text-align: center
+	&-bgbtn
+		width: 100%
+		height: 100%
+		position: absolute
+		top: 0
+		text-align: center
+	&-btn
+		color: $white
+		text-decoration: none
+		text-transform: uppercase
+		line-height: 320px;
+		background-color: $accent
+		padding: 29px 50px 28px 50px
+		border-radius: 100px
+		font-size: 12px
+		letter-spacing: 2px
+		font-weight: 700
+		-moz-transition: all 0.4s ease-out
+		-o-transition: all 0.4s ease-out
+		-webkit-transition: all 0.4s ease-out
+		&:hover
+			text-decoration: none
+			color: $white
+			background-color: lighten($accent, 2%)
+			-moz-transition: all 0.4s ease-out
+			-o-transition: all 0.4s ease-out
+			-webkit-transition: all 0.4s ease-out
+			box-shadow: 0 0 40px -8px rgba(82,82,82,0.56)
+		&:focus
+			text-decoration: none
+			color: $white
+		&:visited
+			text-decoration: none
+			color: $white
+.info
+	h2
+		line-height: 35px
+		font-weight: 500
+		letter-spacing: 1px
+		margin: 0
+	p
+		color: $gray
+		font-size: 17px
+		font-weight: 500
+		-webkit-font-smoothing: antialiased //тоненький шрифт
+		
+
+.model-window
+	width: 422px
+	background-color: $white
+	border-radius: 6px
+	margin: 0 auto
+	margin-top: 10vh
+	z-index: 99 !important
+	box-shadow: 0 0 40px 0px rgba(82,82,82,0.84)
+	&-bg
+		background: rgba(37,40,43,0.6)
+		position: fixed
+		z-index: 2
+		top: 0
+		display: block
+		height: 100%
+		width: 100%
+		display: none
+	&-header
+		font-size: 19px
+		position: relative
+		h4
+			padding: 18px 30px
+			margin: 0
+			color: darken($gray, 28%)
+		.closer
+			position: absolute
+			top: 18px
+			right: 20px
+			width: 24px
+			height: 24px
+			cursor: pointer
+			-moz-transition: all 0.2s ease-out
+			-o-transition: all 0.2s ease-out
+			-webkit-transition: all 0.2s ease-out
+			&:hover
+				transform: scale(1.2)
+				top: 17px
+				right: 19px
+				-moz-transition: all 0.2s ease-out
+				-o-transition: all 0.2s ease-out
+				-webkit-transition: all 0.2s ease-out
+	&-content
+		border-top: 1px solid lighten($gray, 15%)
+		padding: 34px 30px 30px 30px
+		background-color: #f6fcf7
+		border-radius: 0 0 6px 6px
+
+input
+	&:focus
+		box-shadow: 0 0 2.5pt 0.5pt $accent
+		outline: none
+		border: 1px solid $accent
+		//outline: 2px solid $accent
+
+.model-input
+	border-radius: 6px
+	border: 1px solid lighten($gray, 10%) 	
+	padding: 4px 10px
+	width: 100%
+	margin-bottom: 20px
+	font-size: 16px
+	&::-webkit-input-placeholder
+		color: $gray2
+		-webkit-font-smoothing: antialiased //тоненький шрифт
+	&::-moz-placeholder          
+		color: $gray2/* Firefox 19+ */
+		-webkit-font-smoothing: antialiased //тоненький шрифт
+	&:-moz-placeholder           
+		color: $gray2/* Firefox 18- */
+		-webkit-font-smoothing: antialiased //тоненький шрифт
+	&:-ms-input-placeholder      
+		color: $gray2
+		-webkit-font-smoothing: antialiased //тоненький шрифт
+.input-half
+	width: 48%
+	margin-right: 10px
+	&:nth-child(even)
+		margin-right: 0
+.model-submit
+	float: right
+	background-color: $accent
+	border: none
+	border-radius: 6px
+	font-size: 13px
+	padding: 7px 22px
+	color: $white
+	letter-spacing: 0.03em
+	-moz-transition: background-color 0.4s ease-out
+	-o-transition: background-color 0.4s ease-out
+	-webkit-transition: background-color 0.4s ease-out
+	&:hover
+		background-color: $accent2
+		-moz-transition: background-color 0.4s ease-out
+		-o-transition: background-color 0.4s ease-out
+		-webkit-transition: background-color 0.4s ease-out
+.model-checkbox
+	//font-size: 14px
+	color: $gray
+	-webkit-font-smoothing: antialiased //тоненький шрифт
+.forgot
+	font-size: 13px
+	-webkit-font-smoothing: antialiased //тоненький шрифт
+.or-login
+	-webkit-font-smoothing: antialiased //тоненький шрифт
+	border: none
+	background: none
+	color: $accent
+	float: left
+	line-height: 16px
+	font-size: 14px
+	padding: 10px 3px
+	letter-spacing: 0.03em
+	&:hover
+		text-decoration: underline
+
+.hr-label
+    position: relative
+    margin-top: 20px
+    margin-bottom: 20px
+    text-align: center
+    clear: both
+    display: block
+    overflow: hidden
+    &__text
+    	background-color: #f6fcf7
+    	-webkit-font-smoothing: antialiased
+    	position: absolute
+    	right: 44%
+    	text-align: center
+    	color: rgba(0,0,0,0.5)
+    	padding: 0 10px
+    	font-size: 14px
+    	line-height: 1.9em
+    	z-index: 200
+    	
+.hr-label::before, .hr-label::after
+    content: ''
+    position: relative
+    width: 50%
+    background-color: rgba(0,0,0,0.2)
+    display: inline-block
+    height: 1px
+    vertical-align: middle
+
+
+#mainer
+	margin: 16px 0 60px 0
+	//outline: 1px solid red
+
+
+
+
+
+
+///// MODEL WINDOW BEGIN /////
+.md-modal
+    position: fixed
+    top: 50%
+    left: 50%
+    width: 50%
+    max-width: 630px
+    min-width: 320px
+    height: auto
+    border-radius: 6px
+    z-index: 2000
+    visibility: hidden
+    backface-visibility: hidden
+    transform: translateX(-50%) translateY(-50%)
+    background-color: #FFF
+    box-shadow: 0 0 40px 0px rgba(82,82,82,0.84)
+
+.min-model
+	max-width: 422px
+
+.md-show 
+    visibility: visible
+
+.md-overlay
+    position: fixed
+    width: 100%
+    height: 100%
+    visibility: hidden
+    top: 0
+    left: 0
+    z-index: 1000
+    opacity: 0
+    background: rgba(37,40,43,0.6)
+    transition: all 0.3s
+
+.md-show ~ .md-overlay
+    opacity: 1
+    visibility: visible
+
+.md-header
+	h4
+		font-size: 19px
+		padding: 18px 30px
+		margin: 0
+		color: darken($gray, 28%)
+	.closer
+		position: absolute
+		top: 22px
+		right: 20px
+		width: 24px
+		height: 24px
+		padding: 6px
+		cursor: pointer
+		&:hover
+			opacity: 0.75
+.md-content
+	padding-bottom: 20px
+	&-lightgreen
+		border-top: 1px solid lighten($gray, 15%)
+		padding: 34px 30px 30px 30px
+		background-color: #f6fcf7
+		border-radius: 0 0 6px 6px
+
+
+/* Effect 5: newspaper */
+.md-show.md-effect-5 ~ .md-overlay
+    background: rgba(0,127,108,0.8)
+
+.md-effect-5 .md-content
+    transform: scale(0) rotate(720deg)
+    opacity: 0
+    transition: all 0.5s
+
+.md-show.md-effect-5 .md-content
+    transform: scale(1) rotate(0deg)
+    opacity: 1
+///// MODEL WINDOW END /////
+
+@import "media" // Всегда в конце
