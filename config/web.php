@@ -45,9 +45,8 @@ $config = [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
-                '' => 'site/index', // можно убрать и задать 'defaultRoute' => 'site/index' в конфиге
-                //'id/<message>' => 'user/id',
-                'index/id/<message>' => 'user/id',
+                'users/' => 'user/index',
+                'user/<username:\w+>' => 'user/view/',
             ],
         ],
         

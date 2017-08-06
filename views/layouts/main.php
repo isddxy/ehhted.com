@@ -36,13 +36,15 @@ AppAsset::register($this);
         ]);
         $menuItems = [
             ['label' => 'Home', 'url' => ['/site/index']],
+            ['label' => 'Users', 'url' => ['/users']],
             ['label' => 'About', 'url' => ['/site/about']],
             ['label' => 'Contact', 'url' => ['/site/contact']],
         ];
         if (Yii::$app->user->isGuest) {
-            $menuItems[] = ['label' => 'Signup', 'url' => ['/site/signup']];
-            $menuItems[] = ['label' => 'Login', 'url' => '#', 'options' => ['data-toggle' => 'modal', 'data-target' => '#login-modal']];
+            $menuItems[] = ['label' => 'Регистрация', 'url' => ['/site/signup']];
+            $menuItems[] = ['label' => 'Войти', 'url' => '#', 'options' => ['data-toggle' => 'modal', 'data-target' => '#login-modal']];
         } else {
+            $menuItems[] = ['label' => Yii::$app->user->identity->firstname.' '. Yii::$app->user->identity->lastname, 'url' => ['/user/'. Yii::$app->user->identity->login]];
             $menuItems[] = '<li>'
                 . Html::beginForm(['/site/logout'], 'post')
                 . Html::submitButton(
